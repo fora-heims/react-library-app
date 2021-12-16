@@ -18,7 +18,6 @@ function BookList() {
   }, []);
 
   if (loading) return <h1>Loading books...</h1>;
-  console.log(books);
   return (
     <>
       <NavLink to="/">« Back to Homepage</NavLink>
