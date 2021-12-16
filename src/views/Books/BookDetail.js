@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Book from '../../components/book/Book';
 import { getBookById } from '../../services/books';
 
-function BookDetail() {
+function BookDetail(props) {
   const id = 1; // TODO: Use id from route
   const [book, setBook] = useState(null);
 
@@ -11,6 +11,7 @@ function BookDetail() {
   }, [id]);
 
   if (!book) return <h3>Loading book...</h3>;
+  console.log(props);
 
   return <Book book={book} showDetail />;
 }
