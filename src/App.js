@@ -10,12 +10,11 @@ function App() {
     <main className="container">
       <BrowserRouter>
         <h1>Library Catalog</h1>
-        <NavLink to="/"></NavLink>
-        <NavLink to="/books"></NavLink>
+        {/* <NavLink to="/"></NavLink>
+        <NavLink to="/books"></NavLink> */}
         <Switch>
-          <Route path="/books/:id">
-            <BookDetail />
-          </Route>
+          <Route path="/books/:id" component={BookDetail} />
+
           <Route path="/books">
             <BookList />
           </Route>
